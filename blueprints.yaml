@@ -3,12 +3,12 @@ version: 0.1.3
 description: a set of command lines tools and resources to facilitate customization of content development components for **photon** - extended from original Grav DevTools
 icon: asterisk
 author:
-  name: illumiphi
-  email: phi@illumiphi.com
+  name: phi ARCHITECT
+  email: phi@photon-platform.net
   url: http://photon-platform.net
-homepage: https://github.com/photon-platform/grav-plugin-photon-tools
+homepage: https://github.com/photon-platform/grav-plugin-photon
 keywords: devtools, plugin, theme
-bugs: https://github.com/photon-platform/grav-plugin-photon-tools/issues
+bugs: https://github.com/photon-platform/grav-plugin-photon/issues
 license: MIT
 
 form:

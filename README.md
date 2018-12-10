@@ -20,9 +20,11 @@ This started as a [Grav](http://github.com/getgrav/grav) `devtools` Plugin 1.2.1
 
 ## GPM Installation (Preferred)
 
+> NOTE: this plugin has not been submitted to the Grav Package Manager yet. 
+
 The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm).  From the root of your Grav install type:
 
-    bin/gpm install devtools
+    bin/gpm install photon
 
 ## Manual Installation
 
@@ -39,10 +41,10 @@ You should now have all the plugin files under
 To create a new plugin you simply need to run: `bin/plugin devtools newplugin` and fill in the few questions at the prompts:
 
 ```
-> bin/plugin shoton newplugin
+> bin/plugin photon newplugin
 Enter Plugin Name: MyPlugin
 Enter Plugin Description: My New Custom Plugin
-Enter Developer Name: Johnny Rotten
+Enter Developer Name: dev_name or github id
 Enter Developer Email: johnny@rotten.com
 
 SUCCESS plugin myplugin -> Created Successfully
