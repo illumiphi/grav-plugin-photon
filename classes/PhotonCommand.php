@@ -207,10 +207,6 @@ class PhotonCommand extends ConsoleCommand
 
             $filename = $this->inflector->hyphenize($name);
 
-<<<<<<< HEAD
-            //Rename he template files
-=======
->>>>>>> 78468598f4ae8dfbef4be265f0c3dbd2a641e05e
             if ($type != 'blueprint') {
                 rename(
                   $component_folder . DS . $type . '.php',
