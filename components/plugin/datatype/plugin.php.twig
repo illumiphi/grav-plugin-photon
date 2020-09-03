@@ -75,28 +75,20 @@ class Photon{{ component.name|camelize }}Plugin extends Plugin
       // setup
       $page = 			$this->grav['page'];
       $pages = 			$this->grav['pages'];
-      // $collection = $pages->all()->ofType('event');
       $twig = 			$this->grav['twig'];
       $assets = 		$this->grav['assets'];
+
+      // styles
+      $css = 'plugin://photon-{{ component.name|hyphenize }}/assets/{{ component.name|hyphenize }}.css';
+      $assets->addCss($css, 100, true, 'photon-plugins' );
 
       // only load the vars if this datatype page
       if ($page->template() == '{{ component.name|hyphenize }}')
       {
 
-        // styles
-        if ($this->config->get('plugins.photon-{{ component.name|hyphenize }}.built_in_css')) {
-          $css = 'plugin://photon-{{ component.name|hyphenize }}/assets/{{ component.name|hyphenize }}.css';
-          $assets->addCss($css, 100, false, 'photon-plugins' );
-        }
-
         // scripts
-        if ($this->config->get('plugins.photon-{{ component.name|hyphenize }}.built_in_js')) {
-          $js = 'plugin://photon-{{ component.name|hyphenize }}/assets/{{ component.name|hyphenize }}.js';
-          $assets->addJs($js, 100, false, 'defer', 'photon-plugins' );
-        }
-
-
+        $js = 'plugin://photon-{{ component.name|hyphenize }}/assets/{{ component.name|hyphenize }}.js';
+        $assets->addJs($js, 100, true, 'defer', 'photon-plugins' );
       }
     }
-
 }
