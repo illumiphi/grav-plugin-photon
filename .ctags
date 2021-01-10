@@ -1,0 +1,6 @@
+--exclude=.git
+--exclude=**/vendor
+--exclude=**/node_modules
+--exclude=**/packages
+--exclude=**min.js
+--exclude=**pack.js
