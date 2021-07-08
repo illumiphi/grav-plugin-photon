@@ -1,0 +1,22 @@
+title: {{ component.name|camelize }}
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        header.{{ component.name|hyphenize }}:
+          type: tab
+          title: ✴ {{ component.name|camelize }}
+          icon: folder
+          text: Enter details for this {{ component.name|camelize }}
+
+          fields:
+
+            .notes:
+              type: textarea
+              label: Notes
+              help: Notes about this {{ component.name|camelize }}
+              size: medium

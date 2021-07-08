@@ -1,0 +1,43 @@
+<?php
+namespace Grav\Plugin;
+
+use Grav\Common\Plugin;
+use RocketTheme\Toolbox\Event\Event;
+
+use Grav\Common\Grav;
+
+/**
+ * Class Photon{{ component.name|camelize }}Plugin
+ * @package Grav\Plugin
+ */
+class Photon{{ component.name|camelize }}Plugin extends Plugin
+{
+
+    public static function getSubscribedEvents()
+    {
+      return [
+        'onPluginsInitialized' => ['onPluginsInitialized', 0],
+      ];
+    }
+
+    public function onPluginsInitialized()
+    {
+
+      $this->enable([
+        'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+      ]);
+
+      return;
+
+    }
+
+    public function onTwigSiteVariables()
+    {
+      $assets = 		$this->grav['assets'];
+
+      // styles
+      $css = 'plugin://photon-{{ component.name|hyphenize }}/assets/{{ component.name|hyphenize }}.css';
+      $assets->addCss($css, 100, true, 'photon-plugins' );
+
+    }
+}

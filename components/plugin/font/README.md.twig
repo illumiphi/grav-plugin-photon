@@ -1,0 +1,34 @@
+{% set component_title = (component.name|titleize) %}
+{% set component_hyphenated = (component.name|hyphenize) %}
+{% set developer_hyphenated = (component.author.githubid|hyphenize) %}
+# photon ✴ {{ component_title }}
+## DATATYPE plugin
+
+**This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
+
+The **{{ component_title }}** Plugin is for [Grav CMS](http://github.com/getgrav/grav). {{ component.description }}
+
+
+## Configuration
+
+Before configuring this plugin, you should copy the `user/plugins/{{ component_hyphenated }}/{{ component_hyphenated }}.yaml` to `user/config/plugins/{{ component_hyphenated }}.yaml` and only edit that copy.
+
+Here is the default configuration and an explanation of available options:
+
+```yaml
+enabled: true
+```
+
+Note that if you use the admin plugin, a file with your configuration, and named {{component_hyphenated}}.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
+
+## Usage
+
+**Describe how to use the plugin.**
+
+## Credits
+
+**Did you incorporate third-party code? Want to thank somebody?**
+
+## To Do
+
+- [ ] Future plans, if any

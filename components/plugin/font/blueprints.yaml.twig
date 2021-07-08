@@ -1,0 +1,30 @@
+name: PHOTON {{ component.name|titleize }}
+version: 0.1.0
+description: {{ component.description }}
+author:
+  name: {{ component.author.name }}
+  email: {{ component.author.email }}
+homepage: https://github.com/{{ component.author.githubid|hyphenize }}/grav-plugin-photon-{{ component.name|hyphenize }}
+bugs: https://github.com/{{ component.author.githubid|hyphenize }}/grav-plugin-photon-{{ component.name|hyphenize }}/issues
+docs: https://github.com/{{ component.author.githubid|hyphenize }}/grav-plugin-photon-{{ component.name|hyphenize }}/blob/develop/README.md
+license: MIT
+
+dependencies:
+    - { name: photon, version: '>=0.1.0' }
+
+form:
+  validation: strict
+  fields:
+
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+
